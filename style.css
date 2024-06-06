@@ -1,0 +1,26 @@
+/* Pour pouvoir utiliser une fonction il va falloir appeler cette fonction
+on veut changer la couleur de l'ombre d 'un titre */
+
+
+/*1 on ne veut plus que se soit cette couleur "$dark-purple" je vais l'effacer
+on veut que se soient la fonction qui détermine la couleur exate */
+
+/* ma variable */
+$title-color: #a5b4fc;
+
+
+@mixin title-shadow {
+
+ text-shadow: .50rem .50rem $dark-purple; 
+
+} 
+
+
+
+/*2 on appelle notre fonction darken() */
+/*3 on ajoute à présent les paramétres */
+/*4 je prends la variable que j'avais crées au préalable "$title-color: #a5b4fc" */
+/*5 je veux juste mettre la valeur 35% */
+@mixin title-shadow {
+    text-shadow: .50rem .50rem darken($title-color, 35%);
+  }
